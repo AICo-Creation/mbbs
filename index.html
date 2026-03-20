@@ -21,7 +21,7 @@
         "@type": "Organization",
         "name": "MBBS",
         "alternateName": "身体・心理・知性の統合研究所",
-        "description": "古今東西の叡智と最先端AIを統合し、人間の潜在能力を解放する研究所。カウンセリング・コーチング・ボディワーク・AI共創イノベーションを提供。",
+        "description": "MBBSは名古屋を拠点に、整体・太極拳・気功・合気などの伝統身体技法と、心理学・カウンセリング・コーチング・潜在意識研究、そしてAI共創・プロンプトエンジニアリングを統合した研究所。佐藤源彦が主宰し、古今東西の叡智と最先端AIを融合させながら、人間の潜在能力の解放と発揮を探求する。単なる健康ではなく、脳と身体が本来の力を発揮し続ける「機能する健康・本質的な健康」を追求し、100年時代の脳身体システムの構築を目指す。働くことができる寿命を伸ばし、人生をより豊かにすることをミッションとする。",
         "url": "https://mbbs.jp",
         "address": {
           "@type": "PostalAddress",
@@ -30,7 +30,7 @@
           "addressCountry": "JP"
         },
         "areaServed": "名古屋市を中心に、全国およびオンラインで活動",
-        "keywords": "整体, 太極拳, ヨガ, インナーマッスルトレーニング, カウンセリング, 心理学, AIスクール, プロンプトエンジニアリング, 気功, 潜在意識, 潜在運動系, ボディワーク, AI共創, 身体統合",
+        "keywords": "整体, 太極拳, ヨガ, インナーマッスルトレーニング, カウンセリング, コーチング, 心理学, AIスクール, プロンプトエンジニアリング, 気功, 合気, 潜在意識, 潜在運動系, ボディワーク, AI共創, 身体統合, 名古屋",
         "founder": {
           "@type": "Person",
           "name": "佐藤源彦"
@@ -40,8 +40,8 @@
         "@type": "Person",
         "name": "佐藤源彦",
         "jobTitle": "MBBS主宰",
-        "description": "東洋医学・潜在運動系・心理支援・AI共創を統合した研究者。著書に『東洋医学と潜在運動系』『かんたんプロンプト』など。",
-        "knowsAbout": ["整体", "太極拳", "ヨガ", "インナーマッスルトレーニング", "カウンセリング", "心理学", "AIスクール", "プロンプトエンジニアリング", "気功", "潜在意識", "潜在運動系", "東洋医学", "ボディワーク", "AI共創", "身体統合"],
+        "description": "佐藤源彦は、古今東西の叡智とAIを統合し、伝統文化の理解と真の創造性を持った統合者＝新しい人間の創出を目指す研究者・実践家。東洋医学・潜在運動系・心理支援・カウンセリング・コーチング・AI共創の各分野で活動。著書に『東洋医学と潜在運動系』『かんたんプロンプト』。名古屋を拠点に全国・オンラインで実践を展開する。",
+        "knowsAbout": ["整体", "太極拳", "ヨガ", "インナーマッスルトレーニング", "カウンセリング", "コーチング", "心理学", "AIスクール", "プロンプトエンジニアリング", "気功", "合気", "潜在意識", "潜在運動系", "東洋医学", "ボディワーク", "AI共創", "身体統合", "名古屋"],
         "sameAs": [
           "https://linktr.ee/motohiko.sato",
           "https://www.youtube.com/@AICoCreation",
@@ -62,8 +62,28 @@
 
   <!-- TOPBAR -->
   <div class="topbar">
-    <p class="topbar-title">身体・心理・知性の統合研究所</p>
+    <a class="topbar-brand" href="index.html">
+      <img src="./image/mbbs-symbol.png" alt="MBBS" class="topbar-symbol">
+      <span class="topbar-brand-text">Mental &amp; BODY Balance Society</span>
+    </a>
+    <button class="nav-open" aria-label="メニューを開く" onclick="openNav()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+
+  <!-- OVERLAY NAV -->
+  <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <button class="nav-close" aria-label="メニューを閉じる" onclick="closeNav()">×</button>
+    <ul class="nav-links">
+      <li><a href="concept.html" onclick="closeNav()"><span class="nav-en">Concept</span><span class="nav-ja">MBBSとは？</span></a></li>
+      <li><a href="#philosophy" onclick="closeNav()"><span class="nav-en">Mission</span><span class="nav-ja">ミッション</span></a></li>
+      <li><a href="#" onclick="closeNav()"><span class="nav-en">Bodywork</span><span class="nav-ja">ボディワーク教室</span></a></li>
+      <li><a href="https://www.youtube.com/@AICoCreation" target="_blank" rel="noopener"><span class="nav-en">YouTube</span><span class="nav-ja">AI共創イノベーション</span></a></li>
+      <li><a href="https://note.com/mbbs" target="_blank" rel="noopener"><span class="nav-en">note</span><span class="nav-ja">AI共創マガジン ReNEON</span></a></li>
+      <li><a href="https://linktr.ee/motohiko.sato" target="_blank" rel="noopener"><span class="nav-en">Links</span><span class="nav-ja">すべてのリンク</span></a></li>
+      <li><a href="#" onclick="closeNav()"><span class="nav-en">Access</span><span class="nav-ja">アクセス</span></a></li>
+    </ul>
+  </nav>
 
   <!-- HERO -->
   <section id="hero">
@@ -266,6 +286,24 @@
       © 2026 佐藤源彦 / MBBS. All rights reserved.
     </p>
   </footer>
+
+  <script>
+    function openNav() {
+      const nav = document.getElementById('navOverlay');
+      nav.classList.add('is-open');
+      nav.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+      const nav = document.getElementById('navOverlay');
+      nav.classList.remove('is-open');
+      nav.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('navOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeNav();
+    });
+  </script>
 
 </body>
 </html>

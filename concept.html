@@ -12,8 +12,28 @@
 
   <!-- TOPBAR -->
   <div class="topbar">
-    <a class="topbar-home" href="index.html">身体・心理・知性の統合研究所</a>
+    <a class="topbar-brand" href="index.html">
+      <img src="./image/mbbs-symbol.png" alt="MBBS" class="topbar-symbol">
+      <span class="topbar-brand-text">Mental &amp; BODY Balance Society</span>
+    </a>
+    <button class="nav-open" aria-label="メニューを開く" onclick="openNav()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+
+  <!-- OVERLAY NAV -->
+  <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <button class="nav-close" aria-label="メニューを閉じる" onclick="closeNav()">×</button>
+    <ul class="nav-links">
+      <li><a href="concept.html" onclick="closeNav()"><span class="nav-en">Concept</span><span class="nav-ja">MBBSとは？</span></a></li>
+      <li><a href="index.html#philosophy"><span class="nav-en">Mission</span><span class="nav-ja">ミッション</span></a></li>
+      <li><a href="#" onclick="closeNav()"><span class="nav-en">Bodywork</span><span class="nav-ja">ボディワーク教室</span></a></li>
+      <li><a href="https://www.youtube.com/@AICoCreation" target="_blank" rel="noopener"><span class="nav-en">YouTube</span><span class="nav-ja">AI共創イノベーション</span></a></li>
+      <li><a href="https://note.com/mbbs" target="_blank" rel="noopener"><span class="nav-en">note</span><span class="nav-ja">AI共創マガジン ReNEON</span></a></li>
+      <li><a href="https://linktr.ee/motohiko.sato" target="_blank" rel="noopener"><span class="nav-en">Links</span><span class="nav-ja">すべてのリンク</span></a></li>
+      <li><a href="#" onclick="closeNav()"><span class="nav-en">Access</span><span class="nav-ja">アクセス</span></a></li>
+    </ul>
+  </nav>
 
   <!-- CONCEPT HERO -->
   <section id="concept-hero">
@@ -47,65 +67,115 @@
         <p class="ig-subtitle">三つが重なる場所に、潜在能力の解放がある。</p>
 
         <div class="ig-wrap">
-          <svg class="venn-svg" viewBox="0 0 500 460" xmlns="http://www.w3.org/2000/svg">
+          <svg class="venn-svg" viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg">
             <defs>
+              <!-- グラデーション -->
               <radialGradient id="goldCenter" cx="50%" cy="50%" r="50%">
-                <stop offset="0%"   stop-color="#C9A84C" stop-opacity="0.6"/>
-                <stop offset="45%"  stop-color="#C9A84C" stop-opacity="0.2"/>
+                <stop offset="0%"   stop-color="#C9A84C" stop-opacity="0.75"/>
+                <stop offset="40%"  stop-color="#C9A84C" stop-opacity="0.30"/>
                 <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
               </radialGradient>
               <radialGradient id="c1fill" cx="50%" cy="50%" r="50%">
-                <stop offset="0%"   stop-color="#C9A84C" stop-opacity="0.12"/>
+                <stop offset="0%"   stop-color="#C9A84C" stop-opacity="0.18"/>
                 <stop offset="100%" stop-color="#C9A84C" stop-opacity="0.01"/>
               </radialGradient>
               <radialGradient id="c2fill" cx="50%" cy="50%" r="50%">
-                <stop offset="0%"   stop-color="#4a7ac8" stop-opacity="0.15"/>
+                <stop offset="0%"   stop-color="#4a7ac8" stop-opacity="0.22"/>
                 <stop offset="100%" stop-color="#4a7ac8" stop-opacity="0.01"/>
               </radialGradient>
               <radialGradient id="c3fill" cx="50%" cy="50%" r="50%">
-                <stop offset="0%"   stop-color="#3a9a6a" stop-opacity="0.15"/>
+                <stop offset="0%"   stop-color="#3a9a6a" stop-opacity="0.22"/>
                 <stop offset="100%" stop-color="#3a9a6a" stop-opacity="0.01"/>
               </radialGradient>
-              <filter id="glow-center">
-                <feGaussianBlur stdDeviation="7" result="b"/>
-                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              <!-- フィルター -->
+              <filter id="glow-center" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="12" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
               </filter>
               <filter id="glow-dot">
+                <feGaussianBlur stdDeviation="4" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glow-c1" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="8" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glow-c2" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="8" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glow-c3" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="8" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glow-text-gold">
+                <feGaussianBlur stdDeviation="3" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glow-text-blue">
+                <feGaussianBlur stdDeviation="3" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glow-text-green">
                 <feGaussianBlur stdDeviation="3" result="b"/>
                 <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
               </filter>
             </defs>
 
+            <!-- 外側ハロー（各円の背後の光） -->
+            <circle cx="250" cy="162" r="132" fill="none"
+              stroke="#C9A84C" stroke-width="1" stroke-opacity="0.12" filter="url(#glow-c1)" class="vc-halo vc-halo1"/>
+            <circle cx="160" cy="308" r="132" fill="none"
+              stroke="#4a7ac8" stroke-width="1" stroke-opacity="0.12" filter="url(#glow-c2)" class="vc-halo vc-halo2"/>
+            <circle cx="340" cy="308" r="132" fill="none"
+              stroke="#3a9a6a" stroke-width="1" stroke-opacity="0.12" filter="url(#glow-c3)" class="vc-halo vc-halo3"/>
+
             <!-- Three circles -->
             <circle class="vc vc1" cx="250" cy="162" r="126"
-              fill="url(#c1fill)" stroke="#C9A84C" stroke-width="1"/>
+              fill="url(#c1fill)" stroke="#C9A84C" stroke-width="1.5"/>
             <circle class="vc vc2" cx="160" cy="308" r="126"
-              fill="url(#c2fill)" stroke="#4a7ac8" stroke-width="1"/>
+              fill="url(#c2fill)" stroke="#4a7ac8" stroke-width="1.5"/>
             <circle class="vc vc3" cx="340" cy="308" r="126"
-              fill="url(#c3fill)" stroke="#3a9a6a" stroke-width="1"/>
+              fill="url(#c3fill)" stroke="#3a9a6a" stroke-width="1.5"/>
 
-            <!-- Center glow -->
-            <circle class="vcg" cx="250" cy="263" r="60"
+            <!-- 回転ダッシュリング -->
+            <circle class="vc-ring vc-ring1" cx="250" cy="162" r="126"
+              fill="none" stroke="#C9A84C" stroke-width="0.6" stroke-opacity="0.4"
+              stroke-dasharray="6 18"/>
+            <circle class="vc-ring vc-ring2" cx="160" cy="308" r="126"
+              fill="none" stroke="#4a7ac8" stroke-width="0.6" stroke-opacity="0.4"
+              stroke-dasharray="6 18"/>
+            <circle class="vc-ring vc-ring3" cx="340" cy="308" r="126"
+              fill="none" stroke="#3a9a6a" stroke-width="0.6" stroke-opacity="0.4"
+              stroke-dasharray="6 18"/>
+
+            <!-- Center glow layers -->
+            <circle class="vcg" cx="250" cy="263" r="72"
               fill="url(#goldCenter)" filter="url(#glow-center)"/>
-            <circle class="vdot" cx="250" cy="263" r="4"
+            <circle class="vcg-inner" cx="250" cy="263" r="32"
+              fill="#C9A84C" fill-opacity="0.12"/>
+            <circle class="vdot" cx="250" cy="263" r="5"
               fill="#C9A84C" filter="url(#glow-dot)"/>
 
-            <!-- Label: 身体 -->
-            <text class="vl-ja" x="250" y="86" text-anchor="middle">身</text>
-            <text class="vl-en" x="250" y="108" text-anchor="middle">Body</text>
+            <!-- Label: 身 -->
+            <text class="vl-ja vl-gold" x="250" y="84" text-anchor="middle"
+              filter="url(#glow-text-gold)">身</text>
+            <text class="vl-en vl-en-gold" x="250" y="108" text-anchor="middle">Body</text>
 
-            <!-- Label: 心理 -->
-            <text class="vl-ja" x="82"  y="374" text-anchor="middle">心</text>
-            <text class="vl-en" x="82"  y="395" text-anchor="middle">Mind</text>
+            <!-- Label: 心 -->
+            <text class="vl-ja vl-blue" x="78" y="378" text-anchor="middle"
+              filter="url(#glow-text-blue)">心</text>
+            <text class="vl-en vl-en-blue" x="78" y="402" text-anchor="middle">Mind</text>
 
-            <!-- Label: 知性 -->
-            <text class="vl-ja" x="418" y="374" text-anchor="middle">知</text>
-            <text class="vl-en" x="418" y="395" text-anchor="middle">Intelligence</text>
+            <!-- Label: 知 -->
+            <text class="vl-ja vl-green" x="422" y="378" text-anchor="middle"
+              filter="url(#glow-text-green)">知</text>
+            <text class="vl-en vl-en-green" x="422" y="402" text-anchor="middle">Intelligence</text>
 
             <!-- Center text -->
-            <text class="vc-ja" x="250" y="246" text-anchor="middle">潜在能力の</text>
-            <text class="vc-ja" x="250" y="274" text-anchor="middle">解放と発揮</text>
-            <text class="vc-en" x="250" y="300" text-anchor="middle">Human Potential</text>
+            <text class="vc-ja" x="250" y="249" text-anchor="middle">潜在能力の</text>
+            <text class="vc-ja" x="250" y="275" text-anchor="middle">解放と発揮</text>
+            <text class="vc-en" x="250" y="298" text-anchor="middle">Human Potential</text>
           </svg>
         </div>
 
@@ -395,6 +465,23 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.ig-section').forEach(el => observer.observe(el));
+
+    // ナビゲーション
+    function openNav() {
+      const nav = document.getElementById('navOverlay');
+      nav.classList.add('is-open');
+      nav.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+      const nav = document.getElementById('navOverlay');
+      nav.classList.remove('is-open');
+      nav.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('navOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeNav();
+    });
   </script>
 
 </body>

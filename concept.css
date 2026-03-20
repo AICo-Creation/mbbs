@@ -341,38 +341,72 @@
   animation: fadeIn 0.6s ease 2.2s forwards;
 }
 
+/* 外側ハロー */
+.vc-halo {
+  opacity: 0;
+  animation: fadeIn 1.2s ease 0.5s forwards;
+}
+
+/* 回転ダッシュリング */
+.vc-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 1.4s forwards;
+}
+.vc-ring1 { animation: fadeIn 0.8s ease 1.4s forwards, ringRotateCW 28s linear 2.2s infinite; }
+.vc-ring2 { animation: fadeIn 0.8s ease 1.6s forwards, ringRotateCCW 32s linear 2.4s infinite; }
+.vc-ring3 { animation: fadeIn 0.8s ease 1.8s forwards, ringRotateCW 36s linear 2.6s infinite; }
+@keyframes ringRotateCW  { to { transform: rotate(360deg); } }
+@keyframes ringRotateCCW { to { transform: rotate(-360deg); } }
+
+/* 中心内リング */
+.vcg-inner {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: glowIn 1s ease 2s forwards, glowPulse 4s ease-in-out 3s infinite;
+}
+
 /* ラベル類 */
 .vl-ja {
   font-family: var(--font-ja);
-  font-size: 30px;
-  fill: var(--ivory);
+  font-size: 34px;
   opacity: 0;
   animation: fadeIn 0.7s ease 1.6s forwards;
 }
+.vl-gold { fill: #C9A84C; }
+.vl-blue { fill: #6a9ae0; }
+.vl-green { fill: #4ab880; }
+
 .vl-en {
   font-family: var(--font-en);
-  font-size: 14px;
-  fill: var(--ivory-dim);
-  letter-spacing: 2.5px;
+  font-size: 13px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   opacity: 0;
-  animation: fadeIn 0.7s ease 1.8s forwards;
+  animation: fadeIn 0.7s ease 1.9s forwards;
 }
+.vl-en-gold { fill: rgba(201,168,76,0.75); }
+.vl-en-blue { fill: rgba(106,154,224,0.75); }
+.vl-en-green { fill: rgba(74,184,128,0.75); }
+
 .vc-ja {
   font-family: var(--font-ja);
-  font-size: 22px;
+  font-size: 20px;
   fill: #ffffff;
   font-weight: 600;
-  filter: drop-shadow(0 0 10px rgba(120,255,170,0.34));
+  filter: drop-shadow(0 0 12px rgba(201,168,76,0.6)) drop-shadow(0 0 4px rgba(255,255,255,0.4));
   opacity: 0;
   animation: fadeIn 0.8s ease 2.2s forwards;
 }
 .vc-en {
   font-family: var(--font-en);
-  font-size: 16px;
-  fill: #ffffff;
-  letter-spacing: 2px;
-  filter: drop-shadow(0 0 10px rgba(120,255,170,0.28));
+  font-size: 13px;
+  fill: rgba(201,168,76,0.85);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 8px rgba(201,168,76,0.5));
   opacity: 0;
   animation: fadeIn 0.8s ease 2.5s forwards;
 }
@@ -487,33 +521,55 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 96px;
-  height: 96px;
-  border: 1px solid var(--gold);
+  width: 130px;
+  height: 130px;
+  border: 1px solid rgba(201,168,76,0.7);
   border-radius: 50%;
-  background: var(--green-dark);
+  background: radial-gradient(circle, rgba(201,168,76,0.10) 0%, var(--green-dark) 70%);
   box-shadow:
-    0 0 24px rgba(201,168,76,0.22),
-    0 0 48px rgba(201,168,76,0.10),
-    inset 0 0 20px rgba(201,168,76,0.04);
+    0 0 32px rgba(201,168,76,0.30),
+    0 0 64px rgba(201,168,76,0.14),
+    0 0 96px rgba(201,168,76,0.06),
+    inset 0 0 28px rgba(201,168,76,0.08);
   animation: nodePulse 3.5s ease-in-out 1.5s infinite;
   flex-shrink: 0;
+  position: relative;
+}
+.axis-node::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.18);
+}
+.axis-node::after {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.08);
 }
 @keyframes nodePulse {
-  0%,100% { box-shadow: 0 0 24px rgba(201,168,76,0.22), 0 0 48px rgba(201,168,76,0.10); }
-  50%     { box-shadow: 0 0 36px rgba(201,168,76,0.44), 0 0 72px rgba(201,168,76,0.22); }
+  0%,100% {
+    box-shadow: 0 0 32px rgba(201,168,76,0.28), 0 0 64px rgba(201,168,76,0.12), inset 0 0 28px rgba(201,168,76,0.06);
+  }
+  50% {
+    box-shadow: 0 0 48px rgba(201,168,76,0.52), 0 0 96px rgba(201,168,76,0.26), inset 0 0 36px rgba(201,168,76,0.14);
+  }
 }
 .axis-node-name {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--gold);
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   font-family: var(--font-en);
+  text-shadow: 0 0 14px rgba(201,168,76,0.7), 0 0 28px rgba(201,168,76,0.3);
 }
 .axis-node-sub {
-  font-size: 0.7rem;
-  color: var(--ivory-dim);
-  letter-spacing: 0.12em;
-  margin-top: 4px;
+  font-size: 0.92rem;
+  color: var(--ivory);
+  letter-spacing: 0.22em;
+  margin-top: 6px;
+  text-shadow: 0 0 10px rgba(201,168,76,0.5);
 }
 
 .axis-pillars {
