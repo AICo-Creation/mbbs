@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBBSとは？ — 身体・心理・知性の統合研究所</title>
+  <meta name="description" content="MBBS（身体・心理・知性の統合研究所）のコンセプトページ。佐藤源彦が追求する、古今東西の叡智とAIを統合した人間の潜在能力解放のビジョンを解説します。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="concept.css">
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <a class="topbar-home" href="index.html">身体・心理・知性の統合研究所</a>
+  </div>
+
+  <!-- CONCEPT HERO -->
+  <section id="concept-hero">
+    <p class="section-label">What is MBBS?</p>
+    <h1 class="concept-title">MBBSとは？</h1>
+    <div class="divider"></div>
+    <p class="concept-lead">
+      伝統技法と最先端AIを統合し、<br>人間の潜在能力を解放する研究所。
+    </p>
+  </section>
+
+  <!-- CONCEPT BODY -->
+  <section id="concept-body">
+    <div class="concept-inner">
+
+      <div class="concept-block">
+        <p class="section-label">Mission</p>
+        <div class="divider"></div>
+        <p class="concept-text">
+          MBBSは、古今東西の叡智が積み重ねてきた「身体知」と「心の技術」を、最先端のAIと統合する研究所です。時代や文化を超えて人間が探求してきた可能性の扉を、現代の知性とともに開く。私たちが探求するのは、テクノロジーの進化そのものではなく、人間そのものの可能性の深さです。
+        </p>
+      </div>
+
+      <!-- ──────────────────────────────────────────── -->
+      <!-- INFOGRAPHIC 01: 三円統合図                    -->
+      <!-- ──────────────────────────────────────────── -->
+      <div class="ig-section" id="ig-trinity">
+        <p class="ig-number">01</p>
+        <h3 class="ig-title">統合の核心</h3>
+        <p class="ig-title-en">Integrative Core</p>
+        <p class="ig-subtitle">三つが重なる場所に、潜在能力の解放がある。</p>
+
+        <div class="ig-wrap">
+          <svg class="venn-svg" viewBox="0 0 500 460" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="goldCenter" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"   stop-color="#C9A84C" stop-opacity="0.6"/>
+                <stop offset="45%"  stop-color="#C9A84C" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="c1fill" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"   stop-color="#C9A84C" stop-opacity="0.12"/>
+                <stop offset="100%" stop-color="#C9A84C" stop-opacity="0.01"/>
+              </radialGradient>
+              <radialGradient id="c2fill" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"   stop-color="#4a7ac8" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#4a7ac8" stop-opacity="0.01"/>
+              </radialGradient>
+              <radialGradient id="c3fill" cx="50%" cy="50%" r="50%">
+                <stop offset="0%"   stop-color="#3a9a6a" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#3a9a6a" stop-opacity="0.01"/>
+              </radialGradient>
+              <filter id="glow-center">
+                <feGaussianBlur stdDeviation="7" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glow-dot">
+                <feGaussianBlur stdDeviation="3" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Three circles -->
+            <circle class="vc vc1" cx="250" cy="162" r="126"
+              fill="url(#c1fill)" stroke="#C9A84C" stroke-width="1"/>
+            <circle class="vc vc2" cx="160" cy="308" r="126"
+              fill="url(#c2fill)" stroke="#4a7ac8" stroke-width="1"/>
+            <circle class="vc vc3" cx="340" cy="308" r="126"
+              fill="url(#c3fill)" stroke="#3a9a6a" stroke-width="1"/>
+
+            <!-- Center glow -->
+            <circle class="vcg" cx="250" cy="263" r="60"
+              fill="url(#goldCenter)" filter="url(#glow-center)"/>
+            <circle class="vdot" cx="250" cy="263" r="4"
+              fill="#C9A84C" filter="url(#glow-dot)"/>
+
+            <!-- Label: 身体 -->
+            <text class="vl-ja" x="250" y="86" text-anchor="middle">身</text>
+            <text class="vl-en" x="250" y="108" text-anchor="middle">Body</text>
+
+            <!-- Label: 心理 -->
+            <text class="vl-ja" x="82"  y="374" text-anchor="middle">心</text>
+            <text class="vl-en" x="82"  y="395" text-anchor="middle">Mind</text>
+
+            <!-- Label: 知性 -->
+            <text class="vl-ja" x="418" y="374" text-anchor="middle">知</text>
+            <text class="vl-en" x="418" y="395" text-anchor="middle">Intelligence</text>
+
+            <!-- Center text -->
+            <text class="vc-ja" x="250" y="246" text-anchor="middle">潜在能力の</text>
+            <text class="vc-ja" x="250" y="274" text-anchor="middle">解放と発揮</text>
+            <text class="vc-en" x="250" y="300" text-anchor="middle">Human Potential</text>
+          </svg>
+        </div>
+
+        <div class="ig-caption ig-caption--lead">
+          <p
+            class="ig-caption__typed"
+            aria-live="polite"
+            data-text="身体・心理・知性の三領域が統合されるとき、&#10;人間の潜在能力は自然に立ち上がる。"
+          ></p>
+        </div>
+      </div>
+
+      <!-- ──────────────────────────────────────────── -->
+      <!-- INFOGRAPHIC 02: 叡智×AI 統合軸               -->
+      <!-- ──────────────────────────────────────────── -->
+      <div class="ig-section" id="ig-axis">
+        <p class="ig-number">02</p>
+        <h3 class="ig-title">統合の軸</h3>
+        <p class="ig-title-en">Integrative Axis</p>
+        <p class="ig-subtitle">古今東西の叡智と最先端AIが出会う場所に、MBBSがある。</p>
+
+        <div class="ig-wrap">
+          <div class="axis-diagram">
+
+            <div class="axis-side axis-left">
+              <p class="axis-head">古今東西の叡智</p>
+              <p class="axis-head-en">Ancient &amp; Universal Wisdom</p>
+              <ul class="axis-tags">
+                <li>生理学 · 東洋医学 · 整体</li>
+                <li>合気技法 · 太極拳 · 気功 · ヨガ</li>
+                <li>脳科学 · 心理学 · 潜在意識</li>
+                <li>身体技法 · 潜在運動系</li>
+                <li>統合運動系風和道</li>
+              </ul>
+            </div>
+
+            <div class="axis-mid">
+              <div class="axis-line-wrap">
+                <div class="axis-line-l"></div>
+                <div class="axis-node">
+                  <span class="axis-node-name">MBBS</span>
+                  <span class="axis-node-sub">統合点</span>
+                </div>
+                <div class="axis-line-r"></div>
+              </div>
+              <div class="axis-pillars">
+                <span>身体</span>
+                <span class="axis-pillars-sep">·</span>
+                <span>心理</span>
+                <span class="axis-pillars-sep">·</span>
+                <span>知性</span>
+              </div>
+            </div>
+
+            <div class="axis-side axis-right">
+              <p class="axis-head">最先端 AI</p>
+              <p class="axis-head-en">Cutting-edge Intelligence</p>
+              <ul class="axis-tags">
+                <li>ChatGPT · Claude · Gemini</li>
+                <li>プロンプトエンジニアリング</li>
+                <li>AI共創イノベーション</li>
+                <li>知性の拡張</li>
+                <li>AI共創スクール</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="ig-caption ig-caption--lead">
+          <p
+            class="ig-caption__typed ig-caption__typed--axis"
+            aria-live="polite"
+            data-text="時代や文化を超えた叡智と、今この瞬間の最先端AIが融合する。&#10;それがMBBSの独自の立ち位置。"
+          ></p>
+        </div>
+      </div>
+
+      <!-- ──────────────────────────────────────────── -->
+      <!-- INFOGRAPHIC 03: 変容のレイヤー               -->
+      <!-- ──────────────────────────────────────────── -->
+      <div class="ig-section" id="ig-layer">
+        <p class="ig-number">03</p>
+        <h3 class="ig-title">変容のプロセス</h3>
+        <p class="ig-title-en">Transformative Process</p>
+        <p class="ig-subtitle">どこから入っても、深層へと向かう。</p>
+
+        <div class="ig-wrap">
+          <div class="layer-diagram">
+
+            <div class="layer-row" data-d="0">
+              <span class="layer-num">00</span>
+              <div class="layer-bar">
+                <span class="layer-ja">日常・現状の自分</span>
+                <span class="layer-en">Entry Point</span>
+              </div>
+            </div>
+
+            <div class="layer-conn"><div class="layer-line-v"></div></div>
+
+            <div class="layer-row" data-d="1">
+              <span class="layer-num">01</span>
+              <div class="layer-bar">
+                <span class="layer-ja">身体の気づき</span>
+                <span class="layer-en">Body Awareness — Bodywork</span>
+              </div>
+            </div>
+
+            <div class="layer-conn"><div class="layer-line-v"></div></div>
+
+            <div class="layer-row" data-d="2">
+              <span class="layer-num">02</span>
+              <div class="layer-bar">
+                <span class="layer-ja">心理の解放</span>
+                <span class="layer-en">Psychological Freedom — Counseling</span>
+              </div>
+            </div>
+
+            <div class="layer-conn"><div class="layer-line-v"></div></div>
+
+            <div class="layer-row" data-d="3">
+              <span class="layer-num">03</span>
+              <div class="layer-bar">
+                <span class="layer-ja">知性の拡張</span>
+                <span class="layer-en">Cognitive Expansion — AI Co-creation</span>
+              </div>
+            </div>
+
+            <div class="layer-conn"><div class="layer-line-v"></div></div>
+
+            <div class="layer-row layer-final" data-d="4">
+              <span class="layer-num">04</span>
+              <div class="layer-bar">
+                <span class="layer-ja">統合・潜在能力の発揮</span>
+                <span class="layer-en">Integration — Human Potential Unleashed</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="ig-caption ig-caption--lead">
+          <p
+            class="ig-caption__typed ig-caption__typed--layer"
+            aria-live="polite"
+            data-text="身体・心理・知性のどこから入っても、プロセスを経ることで統合へと向かう。&#10;変容は一度ではなく、らせん状に深まっていく。"
+          ></p>
+        </div>
+      </div>
+
+      <!-- ──────────────────────────────────────────── -->
+      <!-- HISTORY: 歩み                              -->
+      <!-- ──────────────────────────────────────────── -->
+      <div class="ig-section" id="history">
+        <h3 class="ig-title">歩み</h3>
+        <p class="ig-title-en">History</p>
+        <p class="ig-subtitle">MBBSがたどってきた道。</p>
+
+        <div class="history-timeline">
+
+          <div class="ht-item ht-left">
+            <div class="ht-box">
+              <p class="ht-year">2011</p>
+              <p class="ht-text">県の支援を受けた医療系の研究会に「心身バランス研究会」として所属。この名称のもとで活動を開始。</p>
+            </div>
+            <div class="ht-diamond"></div>
+          </div>
+
+          <div class="ht-item ht-right">
+            <div class="ht-box">
+              <p class="ht-year">2012</p>
+              <p class="ht-text">研究会から独立し、「MBBS（Mental & BODY Balance Society）」として事業を立ち上げる。人間の心身に関する研究を深め、その知識と技術を広く社会に提供する活動を本格化。</p>
+            </div>
+            <div class="ht-diamond"></div>
+          </div>
+
+          <div class="ht-item ht-left">
+            <div class="ht-box">
+              <p class="ht-year">2023</p>
+              <p class="ht-text">生成AIの急速な発展を機に、AI共創イノベーションを統合。身体・心理・知性を包括する総合研究所として現在の形へ。</p>
+            </div>
+            <div class="ht-diamond"></div>
+          </div>
+
+        </div>
+
+        <div class="history-vision">
+          <p
+            class="history-vision__typed"
+            aria-live="polite"
+            data-text="MBBSの歩みは、まだ途上にある。&#10;身体・心理・知性を統合するほど、人は自分自身という小宇宙の深さに気づく。&#10;そしてその探求は、いつしかこの宇宙そのものへの問いに変わっていく。&#10;&#10;伝統文化の理解と真の創造性を持った統合者——&#10;MBBSが育もうとしているのは、そのような新しい人間の在り方だ。"
+          ></p>
+          <span class="history-vision__cursor" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- Philosophy -->
+      <div class="concept-block">
+        <p class="section-label">Philosophy</p>
+        <div class="divider"></div>
+        <p class="philosophy-quote">
+          「私が長年追い続けてきたのは、<br>
+          人間がまだ自分で気づいていない、<br>
+          <strong>その奥にある力</strong>です。<br><br>
+          伝統の技と、AIの知性。<br>
+          この二つが出会う場所に、MBBSがあります。」
+        </p>
+        <p class="philosophy-name">— 佐藤源彦 / MBBS主宰</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BACK LINK -->
+  <div class="back-link-wrap">
+    <a class="back-link" href="index.html">← トップページへ戻る</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <img
+      class="footer-logo"
+      src="../image/ChatGPT Image 2026年3月20日 00_47_18.png"
+      alt="MBBS"
+    >
+    <p class="footer-copy">
+      身体・心理・知性の統合研究所 MBBS<br>
+      Institute for Integrated Body, Mind &amp; Intelligence<br>
+      © 2026 佐藤源彦 / MBBS. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    // スクロールで各セクションをフェードイン
+    const historyTypingTarget = document.querySelector('.history-vision__typed');
+    const historyTypingCursor = document.querySelector('.history-vision__cursor');
+    const trinityTypingTarget = document.querySelector('.ig-caption__typed');
+    const axisTypingTarget = document.querySelector('.ig-caption__typed--axis');
+    const layerTypingTarget = document.querySelector('.ig-caption__typed--layer');
+
+    function renderTypedText(target, text, count) {
+      const visible = text.slice(0, count);
+      target.innerHTML = visible.replace(/\n/g, '<br>');
+    }
+
+    function startTypedText(target, cursor) {
+      if (!target || target.dataset.started === 'true') return;
+      target.dataset.started = 'true';
+
+      const source = target.dataset.text || '';
+      let index = 0;
+
+      function tick() {
+        index += 1;
+        renderTypedText(target, source, index);
+        if (index < source.length) {
+          const nextChar = source[index];
+          const delay = nextChar === '\n' ? 260 : nextChar === '。' ? 110 : 34;
+          window.setTimeout(tick, delay);
+        } else if (cursor) {
+          cursor.classList.add('history-vision__cursor--done');
+        }
+      }
+
+      tick();
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          if (e.target.id === 'ig-trinity') {
+            startTypedText(trinityTypingTarget);
+          }
+          if (e.target.id === 'ig-axis') {
+            startTypedText(axisTypingTarget);
+          }
+          if (e.target.id === 'ig-layer') {
+            startTypedText(layerTypingTarget);
+          }
+          if (e.target.id === 'history') {
+            startTypedText(historyTypingTarget, historyTypingCursor);
+          }
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.ig-section').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
