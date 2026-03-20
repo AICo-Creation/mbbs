@@ -549,13 +549,65 @@
 .ig-section.visible .layer-row[data-d="4"] { opacity:1; transform:none; transition-delay:0.9s; }
 
 .layer-num {
-  font-size: 0.75rem;
-  color: var(--gold);
-  letter-spacing: 0.15em;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
   flex-shrink: 0;
-  width: 30px;
-  font-family: var(--font-en);
+  width: 3.8em;
+  font-family: var(--font-ja);
+  text-align: center;
 }
+
+/* 入口層 → 深層 へ深まる色の変化 */
+.layer-row[data-d="0"] .layer-num { color: #8a9ea8; }
+.layer-row[data-d="1"] .layer-num { color: #5ab890; }
+.layer-row[data-d="2"] .layer-num { color: #4a8ac8; }
+.layer-row[data-d="3"] .layer-num { color: #8a70c8; }
+.layer-row[data-d="4"] .layer-num { color: var(--gold); }
+
+/* ノード：深くなるほどボーダーが太く・グローが強くなる（B） */
+.layer-row[data-d="0"] .layer-bar {
+  border-left: 2px solid rgba(138,158,168,0.35);
+  background: rgba(138,158,168,0.04);
+  margin-right: 40%;
+}
+.layer-row[data-d="1"] .layer-bar {
+  border-left: 3px solid rgba(90,184,144,0.55);
+  background: rgba(90,184,144,0.05);
+  box-shadow: -3px 0 10px rgba(90,184,144,0.10);
+  margin-right: 28%;
+}
+.layer-row[data-d="2"] .layer-bar {
+  border-left: 4px solid rgba(74,138,200,0.65);
+  background: rgba(74,138,200,0.06);
+  box-shadow: -4px 0 16px rgba(74,138,200,0.14);
+  margin-right: 16%;
+}
+.layer-row[data-d="3"] .layer-bar {
+  border-left: 5px solid rgba(138,112,200,0.75);
+  background: rgba(138,112,200,0.07);
+  box-shadow: -5px 0 22px rgba(138,112,200,0.18);
+  margin-right: 6%;
+}
+.layer-row[data-d="4"] .layer-bar {
+  border-left: 6px solid var(--gold);
+  background: rgba(201,168,76,0.09);
+  box-shadow: -6px 0 30px rgba(201,168,76,0.28);
+  margin-right: 0;
+}
+
+/* ホバー時も各色で光る */
+.layer-row[data-d="0"] .layer-bar:hover { border-left-color: #8a9ea8; background: rgba(138,158,168,0.09); }
+.layer-row[data-d="1"] .layer-bar:hover { border-left-color: #5ab890; background: rgba(90,184,144,0.10); box-shadow: -3px 0 18px rgba(90,184,144,0.22); }
+.layer-row[data-d="2"] .layer-bar:hover { border-left-color: #4a8ac8; background: rgba(74,138,200,0.10); box-shadow: -4px 0 22px rgba(74,138,200,0.26); }
+.layer-row[data-d="3"] .layer-bar:hover { border-left-color: #8a70c8; background: rgba(138,112,200,0.10); box-shadow: -5px 0 28px rgba(138,112,200,0.30); }
+.layer-row[data-d="4"] .layer-bar:hover { border-left-color: var(--gold); background: rgba(201,168,76,0.14); box-shadow: -6px 0 36px rgba(201,168,76,0.38); }
+
+/* 階層名グロー：各色で発光（C） */
+.layer-row[data-d="0"] .layer-num { color: #8a9ea8; text-shadow: 0 0 8px rgba(138,158,168,0.4); }
+.layer-row[data-d="1"] .layer-num { color: #5ab890; text-shadow: 0 0 10px rgba(90,184,144,0.5); }
+.layer-row[data-d="2"] .layer-num { color: #4a8ac8; text-shadow: 0 0 12px rgba(74,138,200,0.6); }
+.layer-row[data-d="3"] .layer-num { color: #8a70c8; text-shadow: 0 0 14px rgba(138,112,200,0.65); }
+.layer-row[data-d="4"] .layer-num { color: var(--gold); text-shadow: 0 0 18px rgba(201,168,76,0.8), 0 0 32px rgba(201,168,76,0.4); }
 
 .layer-bar {
   flex: 1;
