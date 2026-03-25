@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>潜在運動系 — 深層脳身体システムの覚醒 | MBBS 佐藤源彦</title>
+  <meta name="description" content="潜在運動系とは、脳幹・大脳辺縁系と深層筋をつなぐ深層脳身体システム。太極拳・気功・ヨーガが働きかける人体の未知の領域。佐藤源彦（MBBS）が提唱する身体理論。">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="潜在運動系 — 深層脳身体システムの覚醒 | MBBS 佐藤源彦">
+  <meta property="og:description" content="脳幹・大脳辺縁系と深層筋をつなぐ潜在運動系。東洋身体技法が届く、もう一つの身体の地図。">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "潜在運動系 — 深層脳身体システムの覚醒",
+        "description": "潜在運動系とは、脳幹・大脳辺縁系と深層筋によって構成される深層脳身体システム。表層システム（大脳新皮質・表層筋）とは異なる作動原理を持ち、東洋身体技法（太極拳・気功・ヨーガ）が主に働きかける領域。",
+        "author": { "@type": "Person", "name": "佐藤源彦" },
+        "publisher": { "@type": "Organization", "name": "MBBS" },
+        "keywords": ["潜在運動系", "脳幹", "大脳辺縁系", "深層筋", "太極拳", "気功", "ヨーガ", "佐藤源彦", "MBBS", "東洋医学", "潜在能力"],
+        "about": { "@type": "Thing", "name": "潜在運動系", "description": "脳幹・大脳辺縁系と深層筋をつなぐ深層脳身体システム。佐藤源彦が提唱する身体理論。" }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --night:       #040a06;
+      --green:       #0a1a10;
+      --green-mid:   #1A3A2A;
+      --gold:        #C9A84C;
+      --gold-light:  #e8c96a;
+      --gold-dim:    rgba(201,168,76,0.3);
+      --blue-deep:   #0a1628;
+      --blue:        #1E3A6E;
+      --blue-glow:   rgba(60,100,200,0.5);
+      --cyan:        #4ab8d8;
+      --ivory:       #F5F0E8;
+      --ivory-dim:   rgba(245,240,232,0.6);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--night);
+      color: var(--ivory);
+      font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', Georgia, serif;
+      line-height: 1.9;
+      padding-top: 46px;
+      overflow-x: hidden;
+    }
+
+    /* TOPBAR */
+    .topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 46px;
+      background: rgba(4,10,6,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 200;
+    }
+    .topbar-brand {
+      display: flex; align-items: center; gap: 10px; text-decoration: none;
+    }
+    .topbar-symbol { height: 26px; }
+    .topbar-brand-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.78rem; letter-spacing: 0.2em; color: var(--gold);
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% 60%, rgba(10,22,40,0.9) 0%, var(--night) 70%);
+    }
+    #heroCanvas {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none; z-index: 0;
+    }
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-kana {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(0.65rem, 1.5vw, 0.8rem);
+      letter-spacing: 0.4em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 1s ease 0.3s forwards;
+    }
+    .hero-title {
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      line-height: 1.2;
+      color: var(--ivory);
+      opacity: 0;
+      animation: fadeUp 1s ease 0.6s forwards;
+    }
+    .hero-title span {
+      display: block;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.28em;
+      font-weight: 300;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      margin-top: 16px;
+      font-style: italic;
+    }
+    .hero-divider {
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(180deg, transparent, var(--gold), transparent);
+      margin: 40px auto;
+      opacity: 0;
+      animation: fadeIn 1s ease 1s forwards;
+    }
+    .hero-lead {
+      max-width: 560px;
+      font-size: clamp(0.82rem, 2vw, 0.95rem);
+      line-height: 2.2;
+      color: var(--ivory-dim);
+      opacity: 0;
+      animation: fadeUp 1s ease 1.2s forwards;
+    }
+    .hero-lead em { color: var(--gold); font-style: normal; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    /* ===== SECTION BASE ===== */
+    .section {
+      padding: 120px 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .sec-label {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .sec-title {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+    .gold-line {
+      width: 40px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 0 40px 0;
+    }
+    .body-text {
+      font-size: 0.9rem;
+      line-height: 2.3;
+      color: var(--ivory-dim);
+    }
+    .body-text em { color: var(--gold); font-style: normal; }
+    .body-text strong { color: var(--ivory); font-weight: 600; }
+
+    /* ===== REVEAL ===== */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== TWO-LAYER DIAGRAM ===== */
+    #diagram {
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(30,58,110,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.05) 0%, transparent 60%),
+        var(--blue-deep);
+      padding: 120px 24px;
+    }
+    .diagram-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .diagram-wrap {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+
+    /* 左カラム：脳 */
+    .brain-col { display: flex; flex-direction: column; gap: 16px; }
+    .layer-box {
+      border: 1px solid;
+      padding: 28px 24px;
+      position: relative;
+      transition: box-shadow 0.4s;
+    }
+    .layer-box:hover { box-shadow: 0 0 30px currentColor; }
+
+    .layer-surface {
+      border-color: rgba(201,168,76,0.35);
+      background: rgba(201,168,76,0.04);
+    }
+    .layer-deep {
+      border-color: rgba(74,184,216,0.45);
+      background: rgba(74,184,216,0.05);
+      flex: 1;
+    }
+
+    .layer-tag {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .layer-surface .layer-tag { color: var(--gold); }
+    .layer-deep    .layer-tag { color: var(--cyan); }
+
+    .layer-title {
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .layer-surface .layer-title { color: var(--gold-light); }
+    .layer-deep    .layer-title { color: var(--cyan); }
+
+    .layer-items {
+      list-style: none;
+      font-size: 0.78rem;
+      color: var(--ivory-dim);
+      line-height: 2;
+    }
+    .layer-items li::before {
+      content: '— ';
+      color: rgba(255,255,255,0.2);
+    }
+
+    /* 中央：接続線 */
+    .connect-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      position: relative;
+    }
+    .connect-line {
+      width: 1px;
+      flex: 1;
+      background: linear-gradient(180deg,
+        rgba(201,168,76,0.2) 0%,
+        rgba(74,184,216,0.6) 50%,
+        rgba(74,184,216,0.2) 100%);
+      position: relative;
+    }
+    .connect-node {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(74,184,216,0.5);
+      background: radial-gradient(circle, rgba(74,184,216,0.2), transparent 70%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+      text-align: center;
+      flex-shrink: 0;
+      animation: nodePulse 3s ease-in-out infinite;
+    }
+    @keyframes nodePulse {
+      0%, 100% { box-shadow: 0 0 12px rgba(74,184,216,0.3); }
+      50%       { box-shadow: 0 0 28px rgba(74,184,216,0.7), 0 0 50px rgba(74,184,216,0.2); }
+    }
+
+    /* 右カラム：筋肉 */
+    .muscle-col { display: flex; flex-direction: column; gap: 16px; }
+
+    /* ===== DEEP SYSTEM DETAIL ===== */
+    #deep {
+      background: var(--night);
+    }
+    .deep-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2px;
+      margin-top: 50px;
+    }
+    .deep-card {
+      padding: 40px 32px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(74,184,216,0.1);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s, background 0.4s;
+    }
+    .deep-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .deep-card:hover { border-color: rgba(74,184,216,0.3); background: rgba(74,184,216,0.04); }
+    .deep-card:hover::before { opacity: 1; }
+
+    .deep-card-icon {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.5rem;
+      color: rgba(74,184,216,0.25);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .deep-card-title {
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      color: var(--cyan);
+      margin-bottom: 12px;
+    }
+    .deep-card-body {
+      font-size: 0.82rem;
+      line-height: 2;
+      color: var(--ivory-dim);
+    }
+
+    /* ===== ACTIVATION DIAGRAM ===== */
+    #activation {
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(74,184,216,0.08) 0%, transparent 60%),
+        var(--green);
+      padding: 120px 24px;
+    }
+    .activation-inner { max-width: 900px; margin: 0 auto; }
+
+    .flow-diagram {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+    }
+    .flow-node {
+      width: 100%;
+      max-width: 600px;
+      padding: 28px 36px;
+      border: 1px solid rgba(74,184,216,0.25);
+      background: rgba(74,184,216,0.04);
+      text-align: center;
+      position: relative;
+    }
+    .flow-node-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .flow-node-title {
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      color: var(--ivory);
+    }
+    .flow-node-desc {
+      font-size: 0.78rem;
+      color: var(--ivory-dim);
+      margin-top: 8px;
+      line-height: 1.8;
+    }
+    .flow-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 6px 0;
+      gap: 2px;
+    }
+    .flow-arrow span {
+      display: block;
+      width: 1px;
+      height: 14px;
+      background: var(--cyan);
+      opacity: 0.5;
+    }
+    .flow-arrow::after {
+      content: '▼';
+      font-size: 0.55rem;
+      color: var(--cyan);
+      opacity: 0.6;
+    }
+
+    /* ===== PRACTICES ===== */
+    #practices {
+      background: var(--blue-deep);
+      padding: 120px 24px;
+    }
+    .practices-inner { max-width: 900px; margin: 0 auto; }
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2px;
+      margin-top: 50px;
+    }
+    .practice-card {
+      padding: 40px 28px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,168,76,0.1);
+      text-align: center;
+      transition: border-color 0.4s, background 0.4s;
+    }
+    .practice-card:hover {
+      border-color: rgba(201,168,76,0.35);
+      background: rgba(201,168,76,0.04);
+    }
+    .practice-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.2rem;
+      color: var(--gold-dim);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .practice-title {
+      font-size: 1.05rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .practice-en {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--gold-dim);
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+    .practice-body {
+      font-size: 0.8rem;
+      line-height: 2;
+      color: var(--ivory-dim);
+    }
+
+    /* ===== QUOTE ===== */
+    #quote {
+      background: var(--night);
+      padding: 100px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .quote-text {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      line-height: 2.2;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--ivory);
+    }
+    .quote-text em {
+      font-style: normal;
+      color: var(--cyan);
+    }
+    .quote-author {
+      margin-top: 36px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    /* ===== BOOK ===== */
+    #book {
+      background: var(--green);
+      padding: 100px 24px;
+    }
+    .book-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .book-badge {
+      flex-shrink: 0;
+      width: 80px;
+      height: 110px;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      writing-mode: vertical-rl;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-align: center;
+    }
+    .book-info { flex: 1; }
+    .book-title {
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+    .book-pub {
+      font-size: 0.72rem;
+      color: var(--ivory-dim);
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .book-desc {
+      font-size: 0.84rem;
+      line-height: 2.1;
+      color: var(--ivory-dim);
+    }
+
+    /* ===== CTA ===== */
+    .cta-block {
+      text-align: center;
+      padding: 80px 24px 100px;
+      background: var(--night);
+    }
+    .cta-block p {
+      font-size: 0.84rem;
+      color: var(--ivory-dim);
+      margin-bottom: 30px;
+      letter-spacing: 0.08em;
+    }
+    .cta-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn {
+      padding: 12px 36px;
+      border: 1px solid rgba(201,168,76,0.45);
+      color: var(--gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta-btn:hover { background: rgba(201,168,76,0.08); }
+    .cta-btn.primary {
+      background: rgba(201,168,76,0.1);
+      border-color: var(--gold);
+    }
+
+    footer {
+      background: var(--night);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.72rem;
+      color: rgba(245,240,232,0.25);
+      letter-spacing: 0.1em;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 680px) {
+      .diagram-wrap {
+        grid-template-columns: 1fr;
+      }
+      .connect-col {
+        flex-direction: row;
+        padding: 20px 0;
+        height: auto;
+      }
+      .connect-line {
+        flex: 1; height: 1px; width: auto;
+        background: linear-gradient(90deg, transparent, rgba(74,184,216,0.6), transparent);
+      }
+      .book-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a class="topbar-brand" href="index.html">
+      <img src="image/mbbs-symbol.png" alt="MBBS" class="topbar-symbol">
+      <span class="topbar-brand-text">MBBS — Latent Motor System</span>
+    </a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-kana">Latent Motor System</p>
+      <h1 class="hero-title">
+        潜在運動系
+        <span>The Deep Architecture of Human Movement</span>
+      </h1>
+      <div class="hero-divider"></div>
+      <p class="hero-lead">
+        あなたの身体には、まだ目覚めていない<em>深層のシステム</em>がある。<br>
+        脳幹・大脳辺縁系と深層筋によって織りなされる、<br>
+        もう一つの脳身体の地図。<br><br>
+        それは<em>動物時代の脳身体システム</em>——<br>
+        潜在意識の底に眠る、<em>潜在能力</em>の源泉。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONCEPT ===== -->
+  <section class="section reveal">
+    <p class="sec-label">Concept</p>
+    <h2 class="sec-title">脳身体システムの<br>二層構造</h2>
+    <div class="gold-line"></div>
+    <p class="body-text">
+      人間の脳身体システムには、<em>表層</em>と<em>深層</em>という二つの作動原理がある。<br><br>
+      表層システムは、<strong>大脳新皮質と表層筋</strong>で動く。意識・言語・論理・随意運動の領域。私たちが「考える」「動く」と意識するとき、主に使われる層。<br><br>
+      深層システムは、<strong>脳幹・大脳辺縁系と深層筋</strong>で動く。生命維持・感情・本能・無意識の身体調整を担う、より古い進化的な層。<br><br>
+      <em>潜在運動系</em>とは、この深層システム——脳幹・大脳辺縁系と深層筋によって構成される「もう一つの身体」の働きである。
+    </p>
+  </section>
+
+  <!-- ===== DIAGRAM ===== -->
+  <section id="diagram">
+    <div class="diagram-inner">
+      <p class="sec-label reveal">Architecture</p>
+      <h2 class="sec-title reveal">二層の脳身体マップ</h2>
+      <div class="gold-line reveal"></div>
+
+      <div class="diagram-wrap reveal">
+
+        <!-- 左：脳 -->
+        <div class="brain-col">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:0.65rem; letter-spacing:0.3em; color:var(--ivory-dim); text-transform:uppercase; padding-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.06); margin-bottom:4px;">Brain</div>
+
+          <div class="layer-box layer-surface">
+            <div class="layer-tag">Surface Layer</div>
+            <div class="layer-title">大脳新皮質</div>
+            <ul class="layer-items">
+              <li>言語・論理・意識</li>
+              <li>随意的な思考</li>
+              <li>外界への適応</li>
+              <li>人類固有の高次機能</li>
+            </ul>
+          </div>
+
+          <div class="layer-box layer-deep">
+            <div class="layer-tag">Deep Layer ← 潜在運動系</div>
+            <div class="layer-title">脳幹 · 大脳辺縁系</div>
+            <ul class="layer-items">
+              <li>生命維持・自律神経</li>
+              <li>感情・本能・記憶</li>
+              <li>無意識の身体調整</li>
+              <li>進化的に古い脳の層</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 中央：接続 -->
+        <div class="connect-col">
+          <div class="connect-line"></div>
+          <div class="connect-node">神経<br>回路</div>
+          <div class="connect-node" style="margin-top:16px; border-color:rgba(201,168,76,0.4); background:radial-gradient(circle,rgba(201,168,76,0.15),transparent 70%); color:var(--gold); animation-delay:1.5s;">意識<br>境界</div>
+          <div class="connect-line"></div>
+        </div>
+
+        <!-- 右：筋肉 -->
+        <div class="muscle-col">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:0.65rem; letter-spacing:0.3em; color:var(--ivory-dim); text-transform:uppercase; padding-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.06); margin-bottom:4px;">Muscle</div>
+
+          <div class="layer-box layer-surface">
+            <div class="layer-tag">Surface Layer</div>
+            <div class="layer-title">表層筋（アウター）</div>
+            <ul class="layer-items">
+              <li>大きな動作の出力</li>
+              <li>随意的に動かせる</li>
+              <li>疲労しやすい</li>
+              <li>一般的な運動の対象</li>
+            </ul>
+          </div>
+
+          <div class="layer-box layer-deep">
+            <div class="layer-tag">Deep Layer ← 潜在運動系</div>
+            <div class="layer-title">深層筋（インナー）</div>
+            <ul class="layer-items">
+              <li>体幹・関節の安定</li>
+              <li>姿勢の無意識制御</li>
+              <li>持続的な低出力</li>
+              <li>通常の意識では動かない</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEEP SYSTEM ===== -->
+  <section id="deep">
+    <div class="section">
+      <p class="sec-label reveal">Deep System</p>
+      <h2 class="sec-title reveal">潜在運動系を構成する<br>3つの要素</h2>
+      <div class="gold-line reveal"></div>
+      <div class="deep-grid">
+
+        <div class="deep-card reveal">
+          <div class="deep-card-icon">脳幹</div>
+          <div class="deep-card-title">Brain Stem</div>
+          <div class="deep-card-body">呼吸・心拍・体温調節など生命の根幹を司る。意識よりも深い場所で24時間働き続け、身体の根底を支える。太極拳の「丹田の沈み」はここへの働きかけとも言える。</div>
+        </div>
+
+        <div class="deep-card reveal">
+          <div class="deep-card-icon">辺縁</div>
+          <div class="deep-card-title">Limbic System</div>
+          <div class="deep-card-body">感情・記憶・本能的反応を統合する。ストレスや感情が身体の緊張・姿勢・動きに直結する仕組みがここにある。気功の「心を鎮める」実践が辺縁系へアプローチする。</div>
+        </div>
+
+        <div class="deep-card reveal">
+          <div class="deep-card-icon">深筋</div>
+          <div class="deep-card-title">Deep Muscles</div>
+          <div class="deep-card-body">骨の近くに位置するインナーマッスル群。関節の微細な安定と姿勢の無意識調整を担う。通常のトレーニングでは鍛えにくく、東洋の身体技法が最も得意とする領域。</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACTIVATION FLOW ===== -->
+  <section id="activation">
+    <div class="activation-inner">
+      <p class="sec-label reveal">Activation</p>
+      <h2 class="sec-title reveal">潜在運動系の<br>活性化プロセス</h2>
+      <div class="gold-line reveal"></div>
+
+      <div class="flow-diagram reveal">
+
+        <div class="flow-node">
+          <div class="flow-node-en">Step 01 — Release</div>
+          <div class="flow-node-title">表層システムを手放す</div>
+          <div class="flow-node-desc">大脳新皮質の過剰な働き（思考・緊張・制御欲求）を静める。これが深層への入口。</div>
+        </div>
+        <div class="flow-arrow"><span></span><span></span><span></span></div>
+
+        <div class="flow-node">
+          <div class="flow-node-en">Step 02 — Sense</div>
+          <div class="flow-node-title">深層の感覚へ降りる</div>
+          <div class="flow-node-desc">呼吸・重力・内臓感覚・足裏の接地感——言語を超えた身体感覚に意識を向ける。</div>
+        </div>
+        <div class="flow-arrow"><span></span><span></span><span></span></div>
+
+        <div class="flow-node">
+          <div class="flow-node-en">Step 03 — Resonate</div>
+          <div class="flow-node-title">脳幹・辺縁系と深層筋が共鳴する</div>
+          <div class="flow-node-desc">深い呼吸と緩やかな動きが、脳幹・大脳辺縁系を経由して深層筋へ伝わり始める。</div>
+        </div>
+        <div class="flow-arrow"><span></span><span></span><span></span></div>
+
+        <div class="flow-node" style="border-color:rgba(74,184,216,0.5); background:rgba(74,184,216,0.08);">
+          <div class="flow-node-en">Step 04 — Activation</div>
+          <div class="flow-node-title" style="color:var(--cyan);">潜在運動系の覚醒</div>
+          <div class="flow-node-desc">潜在運動系が目覚め、身体の奥から調整力・安定力・生命力が湧き上がる。</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRACTICES ===== -->
+  <section id="practices">
+    <div class="practices-inner">
+      <p class="sec-label reveal">Practices</p>
+      <h2 class="sec-title reveal">潜在運動系に<br>働きかける東洋の技法</h2>
+      <div class="gold-line reveal"></div>
+
+      <div class="practice-grid">
+
+        <div class="practice-card reveal">
+          <div class="practice-num">01</div>
+          <div class="practice-title">太極拳</div>
+          <div class="practice-en">Taijiquan</div>
+          <div class="practice-body">ゆっくりとした流れる動きが、深層筋と脳幹を直接つなぐ。「用意不用力（意を用いて力を用いず）」の原則は、まさに潜在運動系のアクセス法そのもの。</div>
+        </div>
+
+        <div class="practice-card reveal">
+          <div class="practice-num">02</div>
+          <div class="practice-title">気功</div>
+          <div class="practice-en">Qigong</div>
+          <div class="practice-body">呼吸と意識の誘導が、辺縁系の感情処理と連動しながら深層筋の弛緩と活性化をもたらす。自律神経への直接的な介入手段でもある。</div>
+        </div>
+
+        <div class="practice-card reveal">
+          <div class="practice-num">03</div>
+          <div class="practice-title">ヨーガ</div>
+          <div class="practice-en">Yoga</div>
+          <div class="practice-body">アーサナ（体位）と呼吸の統合が、深層筋への意識的接触を可能にする。内受容感覚の発達を通して、潜在運動系の自己認識が育まれる。</div>
+        </div>
+
+        <div class="practice-card reveal">
+          <div class="practice-num">04</div>
+          <div class="practice-title">整体・手技療法</div>
+          <div class="practice-en">Manual Therapy</div>
+          <div class="practice-body">外部からの接触が、深層筋の過緊張を解放し脳幹レベルの調整を促す。熟練した施術者は意図せず潜在運動系に働きかけていることが多い。</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUOTE ===== -->
+  <section id="quote">
+    <canvas id="quoteCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
+    <div class="quote-text reveal" style="position:relative;z-index:1;">
+      表層システムを使いこなすことが、現代社会の知性とされてきた。<br>
+      しかし本当の意味での健康・創造性・生命力は、<br>
+      <em>深層システムが目覚めたとき</em>に初めて姿を現す。<br>
+      潜在運動系とは、人間が忘れかけていた<em>もう一つの知性</em>だ。
+    </div>
+    <div class="quote-author reveal" style="position:relative;z-index:1;">— 佐藤源彦 / Motohiko Sato</div>
+  </section>
+
+  <!-- ===== BOOK ===== -->
+  <section id="book">
+    <div class="section">
+      <p class="sec-label reveal">Reference</p>
+      <h2 class="sec-title reveal">著作</h2>
+      <div class="gold-line reveal"></div>
+      <div class="book-inner reveal">
+        <div class="book-badge">東洋医学と潜在運動系</div>
+        <div class="book-info">
+          <div class="book-title">『東洋医学と潜在運動系』</div>
+          <div class="book-pub">たにぐち書店　/ 著：佐藤源彦</div>
+          <div class="book-desc">大学研究室にてバイオメカニクスの専門家と共に実験を行い、潜在運動系の現象面を科学的に実証。その理論と実践を体系化した著作。東洋医学の身体観と現代神経科学を接続し、潜在運動系という概念を初めて提唱した。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta-block">
+    <p>潜在運動系を直接体験する</p>
+    <div class="cta-links">
+      <a href="classes.html" class="cta-btn primary">太極拳・気功クラスへ →</a>
+      <a href="aischool.html" class="cta-btn">AI共創スクールへ →</a>
+      <a href="profile.html" class="cta-btn">佐藤源彦について →</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 MBBS — 佐藤源彦 / Motohiko Sato &nbsp;|&nbsp; <a href="index.html" style="color:inherit;">トップへ戻る</a></p>
+  </footer>
+
+  <script>
+    // ===== REVEAL =====
+    const reveals = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => revObs.observe(el));
+
+    // ===== HERO NEURAL CANVAS =====
+    (function() {
+      const canvas = document.getElementById('heroCanvas');
+      const ctx = canvas.getContext('2d');
+      let w, h, nodes = [], pulses = [];
+
+      function resize() {
+        w = canvas.width  = canvas.offsetWidth;
+        h = canvas.height = canvas.offsetHeight;
+        initNodes();
+      }
+
+      function initNodes() {
+        nodes = [];
+        const count = Math.floor(w * h / 10000);
+        for (let i = 0; i < count + 30; i++) {
+          nodes.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: Math.random() * 1.2 + 0.3,
+            alpha: Math.random() * 0.5 + 0.1,
+            va: (Math.random() - 0.5) * 0.005,
+            vx: (Math.random() - 0.5) * 0.15,
+            vy: (Math.random() - 0.5) * 0.1,
+            // deep or surface
+            deep: Math.random() > 0.5
+          });
+        }
+      }
+
+      let spawnT = 0;
+      function spawnPulse() {
+        const i = Math.floor(Math.random() * nodes.length);
+        const j = Math.floor(Math.random() * nodes.length);
+        if (i !== j) {
+          pulses.push({ from: i, to: j, t: 0, speed: Math.random() * 0.02 + 0.012 });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        spawnT++;
+        if (spawnT % 18 === 0) spawnPulse();
+
+        // connections
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const d = Math.sqrt(dx*dx + dy*dy);
+            if (d < 130) {
+              const op = (1 - d/130) * 0.08;
+              const col = nodes[i].deep ? `rgba(74,184,216,${op})` : `rgba(201,168,76,${op*0.5})`;
+              ctx.strokeStyle = col;
+              ctx.lineWidth = 0.5;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        // pulses (traveling light on edges)
+        pulses = pulses.filter(p => {
+          p.t += p.speed;
+          const n1 = nodes[p.from], n2 = nodes[p.to];
+          const x = n1.x + (n2.x - n1.x) * p.t;
+          const y = n1.y + (n2.y - n1.y) * p.t;
+          const grd = ctx.createRadialGradient(x, y, 0, x, y, 6);
+          grd.addColorStop(0, `rgba(74,184,216,${(1-p.t)*0.9})`);
+          grd.addColorStop(1, 'rgba(74,184,216,0)');
+          ctx.fillStyle = grd;
+          ctx.beginPath();
+          ctx.arc(x, y, 6, 0, Math.PI*2);
+          ctx.fill();
+          return p.t < 1;
+        });
+
+        // nodes
+        for (const n of nodes) {
+          n.alpha += n.va;
+          if (n.alpha > 0.7) { n.alpha = 0.7; n.va *= -1; }
+          if (n.alpha < 0.05) { n.alpha = 0.05; n.va *= -1; }
+          n.x += n.vx; n.y += n.vy;
+          if (n.x < 0) n.x = w; if (n.x > w) n.x = 0;
+          if (n.y < 0) n.y = h; if (n.y > h) n.y = 0;
+
+          const col = n.deep ? [74,184,216] : [201,168,76];
+          const grd = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r*4);
+          grd.addColorStop(0, `rgba(${col},${n.alpha*0.8})`);
+          grd.addColorStop(1, `rgba(${col},0)`);
+          ctx.fillStyle = grd;
+          ctx.beginPath(); ctx.arc(n.x, n.y, n.r*4, 0, Math.PI*2); ctx.fill();
+
+          ctx.fillStyle = `rgba(${col},${n.alpha})`;
+          ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI*2); ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+      draw();
+    })();
+
+    // ===== QUOTE CANVAS (soft particles) =====
+    (function() {
+      const sec = document.getElementById('quote');
+      const canvas = document.getElementById('quoteCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w, h, pts = [];
+
+      function resize() {
+        const r = sec.getBoundingClientRect();
+        w = canvas.width  = r.width;
+        h = canvas.height = r.height;
+        pts = [];
+        for (let i = 0; i < 60; i++) {
+          pts.push({ x: Math.random()*w, y: Math.random()*h,
+            r: Math.random()*0.8+0.2, a: Math.random()*0.3,
+            va: (Math.random()-0.5)*0.003, vx: (Math.random()-0.5)*0.1, vy: (Math.random()-0.5)*0.08 });
+        }
+      }
+      function draw() {
+        ctx.clearRect(0,0,w,h);
+        for (const p of pts) {
+          p.a += p.va; if (p.a>0.35) { p.a=0.35; p.va*=-1; } if (p.a<0.02) { p.a=0.02; p.va*=-1; }
+          p.x += p.vx; p.y += p.vy;
+          if (p.x<0) p.x=w; if (p.x>w) p.x=0; if (p.y<0) p.y=h; if (p.y>h) p.y=0;
+          ctx.fillStyle = `rgba(74,184,216,${p.a})`;
+          ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
+        }
+        requestAnimationFrame(draw);
+      }
+      window.addEventListener('resize', resize);
+      resize(); draw();
+    })();
+  </script>
+
+</body>
+</html>
